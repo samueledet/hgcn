@@ -46,7 +46,7 @@ def train(args):
 
     # Load data
     DATAPATH = '/home/samuele.edet/hgcn/data'
-    data = load_data(args, os.path.join(os.environ[DATAPATH], args.dataset))
+    data = load_data(args, os.path.join(DATAPATH, args.dataset))
     args.n_nodes, args.feat_dim = data['features'].shape
     if args.task == 'nc':
         Model = NCModel
