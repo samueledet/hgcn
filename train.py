@@ -45,7 +45,7 @@ def train(args):
     logging.info("Using seed {}.".format(args.seed))
 
     # Load data
-    DATAPATH = '/home/samuele.edet/hgcn/data'
+    DATAPATH = '/storage/samuele.edet/hgcn/data'
     data = load_data(args, os.path.join(DATAPATH, args.dataset))
     args.n_nodes, args.feat_dim = data['features'].shape
     if args.task == 'nc':
